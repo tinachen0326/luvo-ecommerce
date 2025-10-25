@@ -1,12 +1,15 @@
 <template>
   <div>
     <!-- 形象圖 Hero Section -->
-    <section class="relative h-[600px] overflow-hidden">
-      <img
-        src="/picture/Luvo_leather shoes-1.jpg"
-        alt="Luvo 形象圖"
+    <section
+      class="relative h-[600px] overflow-hidden bg-gradient-to-r from-gray-800 to-gray-900"
+    >
+      <!-- 暫時用漸層背景代替圖片 -->
+      <!-- <img 
+        src="/picture/Luvo_leather shoes-1.jpg" 
+        alt="Luvo 形象圖" 
         class="w-full h-full object-cover"
-      />
+      /> -->
       <div class="absolute inset-0 bg-black/40 flex items-center">
         <div class="container mx-auto px-4">
           <div class="max-w-2xl text-white">
@@ -32,12 +35,15 @@
         <div
           class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
         >
-          <div class="aspect-square overflow-hidden">
-            <img
-              src="/picture/Luvo_leather shoes-2.jpg"
-              alt="紳士格調經典牛津皮鞋"
+          <div
+            class="aspect-square overflow-hidden bg-gray-200 flex items-center justify-center"
+          >
+            <!-- <img 
+              src="/picture/Luvo_leather shoes-2.jpg" 
+              alt="紳士格調經典牛津皮鞋" 
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-            />
+            /> -->
+            <span class="text-gray-500 text-4xl">👞</span>
           </div>
           <div class="p-4 text-center">
             <h3 class="text-lg font-medium text-gray-800 mb-2">
@@ -51,12 +57,15 @@
         <div
           class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
         >
-          <div class="aspect-square overflow-hidden">
-            <img
-              src="/picture/Luvo_leather shoes-3.jpg"
-              alt="摩登時尚簡約牛津皮鞋"
+          <div
+            class="aspect-square overflow-hidden bg-gray-200 flex items-center justify-center"
+          >
+            <!-- <img 
+              src="/picture/Luvo_leather shoes-3.jpg" 
+              alt="摩登時尚簡約牛津皮鞋" 
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-            />
+            /> -->
+            <span class="text-gray-500 text-4xl">👞</span>
           </div>
           <div class="p-4 text-center">
             <h3 class="text-lg font-medium text-gray-800 mb-2">
@@ -70,12 +79,15 @@
         <div
           class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
         >
-          <div class="aspect-square overflow-hidden">
-            <img
-              src="/picture/Luvo_leather shoes-4.jpg"
-              alt="復古風範雕花牛津皮鞋"
+          <div
+            class="aspect-square overflow-hidden bg-gray-200 flex items-center justify-center"
+          >
+            <!-- <img 
+              src="/picture/Luvo_leather shoes-4.jpg" 
+              alt="復古風範雕花牛津皮鞋" 
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-            />
+            /> -->
+            <span class="text-gray-500 text-4xl">👞</span>
           </div>
           <div class="p-4 text-center">
             <h3 class="text-lg font-medium text-gray-800 mb-2">
@@ -241,21 +253,24 @@ import { ref, onMounted, onUnmounted } from "vue";
 // 輪播資料
 const slides = ref([
   {
-    image: "/picture/Luvo_leather shoes-6.jpg",
+    image: "", // 暫時不用圖片
     title: "質感升級，品味不凡！",
     content: `活動期間：2/6 - 2/29<br>
               全館滿NT$3,000再享免運優惠！<br>
               (即日起至 2/29，精選皮鞋限時85折，最低 NT$2,380 起，讓您以最優價格享受經典工藝。)`,
+    bgColor: "bg-gradient-to-r from-red-900 to-red-700",
   },
   {
-    image: "/picture/Luvo_leather shoes-7.jpg",
+    image: "",
     title: "新會員首購禮",
     content: "註冊即享 NT$100 折扣券（滿 NT$1,000 可用）",
+    bgColor: "bg-gradient-to-r from-blue-900 to-blue-700",
   },
   {
-    image: "/picture/Luvo_leather shoes-8.jpg",
+    image: "",
     title: "品牌專屬優惠",
     content: "每消費 NT$100 = 1 積分，累積可折抵現金，購物越多回饋越多！",
+    bgColor: "bg-gradient-to-r from-purple-900 to-purple-700",
   },
 ]);
 

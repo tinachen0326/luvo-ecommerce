@@ -5,11 +5,12 @@
         <!-- Logo -->
         <div class="flex-shrink-0">
           <router-link to="/" class="flex items-center">
-            <img
-              src="/picture/Luvo_leather shoes_logo.png"
-              alt="Luvo Logo"
+            <div class="text-white text-2xl font-bold">Luvo 履藝</div>
+            <!-- <img 
+              src="/picture/Luvo_leather shoes_logo.png" 
+              alt="Luvo Logo" 
               class="h-16 w-auto"
-            />
+            /> -->
           </router-link>
         </div>
 
