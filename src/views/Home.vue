@@ -108,13 +108,12 @@
         <!-- 輪播圖容器 -->
         <div class="relative h-[400px] rounded-lg overflow-hidden">
           <transition name="fade" mode="out-in">
-            <div :key="currentSlide" class="absolute inset-0">
-              <img
-                :src="slides[currentSlide].image"
-                :alt="slides[currentSlide].title"
-                class="w-full h-full object-cover"
-              />
-              <div class="absolute inset-0 bg-black/30">
+            <div
+              :key="currentSlide"
+              :class="['absolute inset-0', slides[currentSlide].bgColor]"
+            >
+              <!-- 暫時使用漸層背景，不用圖片 -->
+              <div class="absolute inset-0 bg-black/20">
                 <div class="container mx-auto px-8 h-full flex items-center">
                   <div class="text-white max-w-xl">
                     <h3 class="text-3xl font-bold mb-4">
@@ -185,12 +184,14 @@
     </section>
 
     <!-- 加入會員專區 -->
-    <section class="relative h-[500px] overflow-hidden my-12">
-      <img
-        src="/picture/Luvo_leather shoes-1.jpg"
-        alt="加入會員"
+    <section
+      class="relative h-[500px] overflow-hidden my-12 bg-gradient-to-r from-gray-800 to-gray-900"
+    >
+      <!-- <img 
+        src="/picture/Luvo_leather shoes-1.jpg" 
+        alt="加入會員" 
         class="w-full h-full object-cover"
-      />
+      /> -->
       <div class="absolute inset-0 bg-black/50 flex items-center">
         <div class="container mx-auto px-4">
           <div class="max-w-2xl text-white">
@@ -225,13 +226,15 @@
           v-for="category in categories"
           :key="category.name"
           :to="category.link"
-          class="relative h-64 rounded-lg overflow-hidden group"
+          class="relative h-64 rounded-lg overflow-hidden group bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center"
         >
-          <img
-            :src="category.image"
+          <!-- 暫時使用圖示 -->
+          <div class="text-8xl">{{ category.icon }}</div>
+          <!-- <img 
+            :src="category.image" 
             :alt="category.name"
             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-          />
+          /> -->
           <div
             class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"
           >
@@ -308,36 +311,12 @@ const stopAutoPlay = () => {
 
 // 熱門分類
 const categories = ref([
-  {
-    name: "皮鞋",
-    image: "/picture/Luvo_leather shoes-9.jpg",
-    link: "/products/leather-shoes",
-  },
-  {
-    name: "休閒鞋",
-    image: "/picture/Luvo_leather shoes-10.jpg",
-    link: "/products/casual-shoes",
-  },
-  {
-    name: "靴子",
-    image: "/picture/Luvo_leather shoes-11.jpg",
-    link: "/products/boots",
-  },
-  {
-    name: "襪子",
-    image: "/picture/Luvo_leather shoes-12.jpg",
-    link: "/accessories/socks",
-  },
-  {
-    name: "皮帶",
-    image: "/picture/Luvo_leather shoes-13.jpg",
-    link: "/accessories/belts",
-  },
-  {
-    name: "托特包",
-    image: "/picture/Luvo_leather shoes-14.jpg",
-    link: "/accessories/bags",
-  },
+  { name: "皮鞋", icon: "👞", link: "/products/leather-shoes" },
+  { name: "休閒鞋", icon: "👟", link: "/products/casual-shoes" },
+  { name: "靴子", icon: "🥾", link: "/products/boots" },
+  { name: "襪子", icon: "🧦", link: "/accessories/socks" },
+  { name: "皮帶", icon: "👔", link: "/accessories/belts" },
+  { name: "托特包", icon: "👜", link: "/accessories/bags" },
 ]);
 
 onMounted(() => {
