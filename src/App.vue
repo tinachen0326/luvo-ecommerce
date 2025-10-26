@@ -10,12 +10,20 @@
 
     <!-- 頁尾 -->
     <AppFooter />
+
+    <!-- 購物車側邊欄（全域） -->
+    <CartSidebar />
+
+    <!-- 通知提示（全域） -->
+    <NotificationToast />
   </div>
 </template>
 
 <script setup>
 import AppHeader from "./components/layout/AppHeader.vue";
 import AppFooter from "./components/layout/AppFooter.vue";
+import CartSidebar from "./components/business/CartSidebar.vue";
+import NotificationToast from "./components/base/NotificationToast.vue";
 </script>
 
 <style>

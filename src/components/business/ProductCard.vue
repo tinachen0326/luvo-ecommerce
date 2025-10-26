@@ -194,6 +194,11 @@
 <script setup>
 import { ref, computed } from "vue";
 import BaseButton from "../base/BaseButton.vue";
+import { useCartStore } from "../../stores/useCartStore";
+import { useUserStore } from "../../stores/useUserStore";
+
+const cartStore = useCartStore();
+const userStore = useUserStore();
 
 const props = defineProps({
   product: {
@@ -202,13 +207,15 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(["quick-view", "add-to-cart", "toggle-favorite"]);
+const emit = defineEmits(["quick-view"]);
 
 // 是否加入購物車中
 const isAddingToCart = ref(false);
 
-// 是否已收藏
-const isFavorited = ref(props.product.isFavorited || false);
+// 是否已收藏（從 userStore 獲取）
+const isFavorited = computed(() => {
+  return userStore.isFavorited(props.product.id);
+});
 
 // 計算最終價格
 const finalPrice = computed(() => {
