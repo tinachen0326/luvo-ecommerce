@@ -1,8 +1,8 @@
 # 皮鞋電商平台系統 Luvo Ecommerce Platform
 
-![Vue.js](https://img.shields.io/badge/Vue.js-3-4FC08D.svg)
-![Vite](https://img.shields.io/badge/Vite-5-646CFF.svg)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38B2AC.svg)
+[![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)](https://vuejs.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 ## 專案介紹
 
