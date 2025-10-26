@@ -128,7 +128,7 @@ yarn dev
 ## 項目結構
 
 ```
-luvo-ecommerce-frontend/
+luvo-ecommerce/
 │
 ├── public/                         # 靜態資源
 │   ├── favicon.ico
@@ -352,30 +352,6 @@ export const productAPI = {
     return request.post("/products", data);
   },
 };
-```
-
-### 提交規範
-
-遵循 Conventional Commits 規範：
-
-```bash
-# 功能新增
-git commit -m "feat: 添加商品搜尋功能"
-
-# Bug 修復
-git commit -m "fix: 修復購物車計算錯誤"
-
-# 樣式調整
-git commit -m "style: 調整商品卡片樣式"
-
-# 文檔更新
-git commit -m "docs: 更新 README 文檔"
-
-# 重構代碼
-git commit -m "refactor: 重構商品列表組件"
-
-# 性能優化
-git commit -m "perf: 優化圖片加載性能"
 ```
 
 ## 常見問題
