@@ -83,8 +83,8 @@ Luvo 履藝皮鞋是一個前端電商練習專案，使用 Vue.js 3 及現代�
 #### 1. Clone 專案
 
 ```bash
-git clone https://github.com/yourusername/luvo-ecommerce-frontend.git
-cd luvo-ecommerce-frontend
+git clone https://github.com/tinachen0326/luvo-ecommerce.git
+cd luvo-ecommerce
 ```
 
 #### 2. 安裝依賴
