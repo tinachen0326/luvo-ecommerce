@@ -14,6 +14,12 @@ const routes = [
     component: () => import("../views/Products/ProductList.vue"),
     meta: { title: "商品列表 | Luvo 履藝" },
   },
+  {
+    path: "/discount",
+    name: "Discount",
+    component: () => import("../views/Discount.vue"),
+    meta: { title: "買2送1 | Luvo 履藝" },
+  },
   // 其他路由暫時註解，等頁面做好再開啟
   /* 
   {
