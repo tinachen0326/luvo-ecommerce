@@ -20,6 +20,27 @@ const routes = [
     component: () => import("../views/Discount.vue"),
     meta: { title: "買2送1 | Luvo 履藝" },
   },
+  {
+    path: "/new-member",
+    name: "NewMember",
+    component: () => import("../views/NewMember.vue"),
+    meta: { title: "新會員首購禮 | Luvo 履藝" },
+  },
+  // 其他路由暫時註解，等頁面做好再開啟
+  /* 
+  {
+    path: '/brand',
+    name: 'Brand',
+    component: () => import('../views/Brand.vue'),
+    meta: { title: '品牌專屬優惠 | Luvo 履藝' }
+  },列表 | Luvo 履藝' }
+  },
+  {
+    path: '/discount',
+    name: 'Discount',
+    component: () => import('../views/Discount.vue'),
+    meta: { title: '買2送1 | Luvo 履藝' }
+  }
   // 其他路由暫時註解，等頁面做好再開啟
   /* 
   {
