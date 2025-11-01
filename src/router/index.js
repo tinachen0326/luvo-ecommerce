@@ -26,6 +26,12 @@ const routes = [
     component: () => import("../views/NewMember.vue"),
     meta: { title: "新會員首購禮 | Luvo 履藝" },
   },
+  {
+    path: "/brand",
+    name: "Brand",
+    component: () => import("../views/Brand.vue"),
+    meta: { title: "品牌專屬優惠 | Luvo 履藝" },
+  },
   // 其他路由暫時註解，等頁面做好再開啟
   /* 
   {
