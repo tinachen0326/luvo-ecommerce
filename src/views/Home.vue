@@ -218,7 +218,7 @@
           v-for="category in categories"
           :key="category.name"
           :to="category.link"
-          class="relative h-64 rounded-lg overflow-hidden group"
+          class="relative h-64 rounded-xl overflow-hidden group"
         >
           <!-- 背景圖片 -->
           <img

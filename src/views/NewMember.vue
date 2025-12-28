@@ -1,16 +1,20 @@
 <template>
   <div>
     <!-- Hero 形象圖 -->
-    <section
-      class="relative h-[500px] overflow-hidden bg-gradient-to-r from-blue-900 to-blue-700"
-    >
-      <div class="absolute inset-0 bg-black/40 flex items-center">
+    <section class="relative h-[500px] overflow-hidden">
+      <!-- 背景圖片 -->
+      <img
+        src="/images/register-hero.jpg"
+        alt="新會員首購禮"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <!-- 遮罩層 -->
+      <div class="absolute inset-0 bg-black/50 flex items-center">
         <div class="container mx-auto px-4">
           <div class="max-w-2xl text-white">
             <h1 class="text-5xl font-bold mb-4 animate-fade-in">
               新會員首購禮
             </h1>
-            <p class="text-sm mb-4 opacity-90">(網頁為練習專案)</p>
             <p class="text-2xl leading-relaxed animate-slide-up">
               註冊即享 NT$100 折扣券（滿 NT$1,000 可用）
             </p>
@@ -18,9 +22,9 @@
             <!-- 註冊按鈕 -->
             <router-link
               to="/register"
-              class="inline-block mt-8 px-8 py-4 bg-yellow-400 text-red-900 font-bold rounded-lg hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-xl"
+              class="inline-block mt-8 px-8 py-4 bg-amber-800 text-white font-bold rounded-lg hover:bg-amber-900 transition-all transform hover:scale-105 shadow-xl"
             >
-              立即註冊領取優惠券 🎁
+              立即加入會員
             </router-link>
           </div>
         </div>
