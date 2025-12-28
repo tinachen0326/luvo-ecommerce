@@ -36,7 +36,7 @@
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
-            🎉 新會員專屬福利
+            新會員專屬福利
           </h2>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -74,7 +74,7 @@
             :class="[
               'px-4 py-2 rounded-lg font-medium transition-all',
               selectedCategory === category.value
-                ? 'bg-blue-600 text-white'
+                ? 'bg-amber-800 text-white'
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200',
             ]"
           >
@@ -157,17 +157,14 @@ import ProductCard from "../components/business/ProductCard.vue";
 // 福利說明（靜態數據）
 const benefits = [
   {
-    icon: "💰",
     title: "$100 折扣券",
     description: "註冊完成即贈，滿 $1,000 可使用",
   },
   {
-    icon: "🎂",
     title: "生日禮遇",
     description: "當月壽星享專屬生日折扣",
   },
   {
-    icon: "👀",
     title: "新品搶先看",
     description: "新品上市優先通知，不錯過好物",
   },
