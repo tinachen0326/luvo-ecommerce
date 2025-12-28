@@ -17,7 +17,7 @@
           <!-- 快速查看 -->
           <button
             @click.prevent="$emit('quick-view', product)"
-            class="bg-white text-gray-800 px-4 py-2 rounded-full hover:bg-red-600 hover:text-white transition-colors shadow-lg text-sm font-medium"
+            class="bg-white text-gray-800 px-4 py-2 rounded-full hover:bg-amber-800 hover:text-white transition-colors shadow-lg text-sm font-medium"
             title="快速查看"
           >
             快速查看

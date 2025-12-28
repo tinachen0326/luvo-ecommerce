@@ -7,7 +7,7 @@
       class="block text-sm font-medium text-gray-700 mb-1"
     >
       {{ label }}
-      <span v-if="required" class="text-red-500">*</span>
+      <span v-if="required" class="text-amber-500">*</span>
     </label>
 
     <!-- 輸入框容器 -->
@@ -65,7 +65,7 @@
     </p>
 
     <!-- 錯誤訊息 -->
-    <p v-if="error" class="mt-1 text-sm text-red-600">
+    <p v-if="error" class="mt-1 text-sm text-amber-600">
       {{ error }}
     </p>
   </div>

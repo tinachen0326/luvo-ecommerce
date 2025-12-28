@@ -4,7 +4,7 @@
     <div class="bg-white border-b">
       <div class="container mx-auto px-4 py-4">
         <nav class="flex items-center text-sm text-gray-600">
-          <router-link to="/" class="hover:text-red-600">首頁</router-link>
+          <router-link to="/" class="hover:text-amber-800">首頁</router-link>
           <span class="mx-2">/</span>
           <span class="text-gray-900 font-medium">{{ categoryName }}</span>
         </nav>
@@ -36,7 +36,7 @@
             <!-- 排序 -->
             <select
               v-model="sortBy"
-              class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+              class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-800"
             >
               <option value="default">預設排序</option>
               <option value="price-asc">價格：低到高</option>
@@ -47,13 +47,13 @@
             </select>
 
             <!-- 視圖切換 -->
-            <div class="flex border border-gray-300 rounded-lg overflow-hidden">
+            <div class="flex border border-gray-300 rounded-xl overflow-hidden">
               <button
                 @click="viewMode = 'grid'"
                 :class="[
                   'px-3 py-2 transition-colors',
                   viewMode === 'grid'
-                    ? 'bg-red-600 text-white'
+                    ? 'bg-amber-800 text-white'
                     : 'bg-white text-gray-600 hover:bg-gray-50',
                 ]"
               >
@@ -68,7 +68,7 @@
                 :class="[
                   'px-3 py-2 transition-colors',
                   viewMode === 'list'
-                    ? 'bg-red-600 text-white'
+                    ? 'bg-amber-800 text-white'
                     : 'bg-white text-gray-600 hover:bg-gray-50',
                 ]"
               >
@@ -145,8 +145,8 @@
                   :class="[
                     'px-3 py-2 border rounded text-sm transition-colors',
                     selectedSizes.includes(size)
-                      ? 'border-red-600 bg-red-50 text-red-600'
-                      : 'border-gray-300 hover:border-red-600',
+                      ? 'border-amber-800 bg-amber-50 text-amber-600'
+                      : 'border-gray-300 hover:border-amber-800',
                   ]"
                 >
                   {{ size }}
@@ -165,7 +165,7 @@
                   :class="[
                     'w-8 h-8 rounded-full border-2 transition-all',
                     selectedColors.includes(color.hex)
-                      ? 'border-red-600 ring-2 ring-red-200'
+                      ? 'border-amber-800 ring-2 ring-amber-200'
                       : 'border-gray-300',
                   ]"
                   :style="{ backgroundColor: color.hex }"
@@ -189,7 +189,7 @@
           <!-- 載入中 -->
           <div v-if="loading" class="flex justify-center items-center h-64">
             <div
-              class="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600"
+              class="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-800"
             ></div>
           </div>
 
@@ -250,7 +250,7 @@
               >
                 上一頁
               </button>
-              <button class="px-4 py-2 bg-red-600 text-white rounded-lg">
+              <button class="px-4 py-2 bg-amber-800 text-white rounded-lg">
                 1
               </button>
               <button
@@ -423,7 +423,6 @@ onMounted(() => {
         name: "【Luvo】紳士格調經典牛津皮鞋",
         price: 6980,
         category: "leather-shoes",
-        icon: "👞",
         rating: 4.8,
         reviewCount: 128,
         isNew: true,
@@ -437,7 +436,6 @@ onMounted(() => {
         price: 4980,
         discount: 15,
         category: "leather-shoes",
-        icon: "👞",
         rating: 4.5,
         reviewCount: 89,
         stock: 15,
@@ -449,7 +447,6 @@ onMounted(() => {
         name: "【Luvo】復古風範雕花牛津皮鞋",
         price: 7980,
         category: "leather-shoes",
-        icon: "👞",
         rating: 4.9,
         reviewCount: 156,
         isNew: true,
@@ -462,7 +459,6 @@ onMounted(() => {
         name: "【Luvo】商務正裝德比皮鞋",
         price: 5980,
         category: "leather-shoes",
-        icon: "👞",
         rating: 4.6,
         reviewCount: 74,
         stock: 12,
@@ -475,7 +471,6 @@ onMounted(() => {
         price: 4580,
         discount: 20,
         category: "leather-shoes",
-        icon: "👞",
         rating: 4.7,
         reviewCount: 92,
         stock: 20,
@@ -487,7 +482,6 @@ onMounted(() => {
         name: "【Luvo】經典百搭孟克鞋",
         price: 6580,
         category: "leather-shoes",
-        icon: "👞",
         rating: 4.4,
         reviewCount: 63,
         stock: 18,
@@ -499,7 +493,6 @@ onMounted(() => {
         name: "【Luvo】時尚切爾西靴",
         price: 8980,
         category: "boots",
-        icon: "🥾",
         rating: 4.8,
         reviewCount: 142,
         isNew: true,
@@ -512,7 +505,6 @@ onMounted(() => {
         name: "【Luvo】工裝風馬丁靴",
         price: 7580,
         category: "boots",
-        icon: "🥾",
         rating: 4.7,
         reviewCount: 108,
         stock: 15,
@@ -525,7 +517,6 @@ onMounted(() => {
         price: 3980,
         discount: 25,
         category: "casual-shoes",
-        icon: "👟",
         rating: 4.5,
         reviewCount: 215,
         stock: 30,
