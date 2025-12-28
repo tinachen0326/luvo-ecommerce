@@ -1,20 +1,19 @@
 <template>
   <div>
     <!-- 形象圖 Hero Section -->
-    <section
-      class="relative h-[600px] overflow-hidden bg-gradient-to-r from-gray-800 to-gray-900"
-    >
-      <!-- 暫時用漸層背景代替圖片 -->
-      <!-- <img 
-        src="/picture/Luvo_leather shoes-1.jpg" 
-        alt="Luvo 形象圖" 
-        class="w-full h-full object-cover"
-      /> -->
-      <div class="absolute inset-0 bg-black/40 flex items-center">
+    <section class="relative h-[600px] overflow-hidden">
+      <!-- 背景圖片 -->
+      <img
+        src="/images/luvo-leather-shoes-1.jpg"
+        alt="Luvo 形象圖"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <!-- 遮罩層 -->
+      <div class="absolute inset-0 bg-black/50 flex items-center">
         <div class="container mx-auto px-4">
           <div class="max-w-2xl text-white">
             <h1 class="text-5xl font-bold mb-4">「Love Your Step」</h1>
-            <p class="text-lg leading-relaxed mb-2">(網頁為練習專案)</p>
+            <!-- <p class="text-lg leading-relaxed mb-2">(網頁為練習專案)</p> -->
             <p class="text-lg leading-relaxed">
               Luvo 的誕生源自創辦人對細節與生活品質的執著。<br />
               品牌旨在以創新的設計理念重新定義「皮鞋工藝」，<br />
@@ -27,25 +26,22 @@
 
     <!-- 新品搶先看 -->
     <section class="container mx-auto px-4 py-12">
-      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+      <h2 class="text-3xl font-bold text-left mb-8 text-gray-800">
         新品搶先看
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- 商品 1 -->
         <div
-          class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+          class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
         >
-          <div
-            class="aspect-square overflow-hidden bg-gray-200 flex items-center justify-center"
-          >
-            <!-- <img 
-              src="/picture/Luvo_leather shoes-2.jpg" 
-              alt="紳士格調經典牛津皮鞋" 
+          <div class="aspect-square overflow-hidden bg-gray-200">
+            <img
+              src="/images/product-1.jpg"
+              alt="紳士格調經典牛津皮鞋"
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-            /> -->
-            <span class="text-gray-500 text-4xl">👞</span>
+            />
           </div>
-          <div class="p-4 text-center">
+          <div class="p-4 text-left">
             <h3 class="text-lg font-medium text-gray-800 mb-2">
               【Luvo】紳士格調經典牛津皮鞋
             </h3>
@@ -55,19 +51,16 @@
 
         <!-- 商品 2 -->
         <div
-          class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+          class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
         >
-          <div
-            class="aspect-square overflow-hidden bg-gray-200 flex items-center justify-center"
-          >
-            <!-- <img 
-              src="/picture/Luvo_leather shoes-3.jpg" 
-              alt="摩登時尚簡約牛津皮鞋" 
+          <div class="aspect-square overflow-hidden bg-gray-200">
+            <img
+              src="/images/product-2.jpg"
+              alt="摩登時尚簡約牛津皮鞋"
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-            /> -->
-            <span class="text-gray-500 text-4xl">👞</span>
+            />
           </div>
-          <div class="p-4 text-center">
+          <div class="p-4 text-left">
             <h3 class="text-lg font-medium text-gray-800 mb-2">
               【Luvo】摩登時尚簡約牛津皮鞋
             </h3>
@@ -77,19 +70,16 @@
 
         <!-- 商品 3 -->
         <div
-          class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+          class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
         >
-          <div
-            class="aspect-square overflow-hidden bg-gray-200 flex items-center justify-center"
-          >
-            <!-- <img 
-              src="/picture/Luvo_leather shoes-4.jpg" 
-              alt="復古風範雕花牛津皮鞋" 
+          <div class="aspect-square overflow-hidden bg-gray-200">
+            <img
+              src="/images/product-3.jpg"
+              alt="復古風範雕花牛津皮鞋"
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-            /> -->
-            <span class="text-gray-500 text-4xl">👞</span>
+            />
           </div>
-          <div class="p-4 text-center">
+          <div class="p-4 text-left">
             <h3 class="text-lg font-medium text-gray-800 mb-2">
               【Luvo】復古風範雕花牛津皮鞋
             </h3>
@@ -101,19 +91,23 @@
 
     <!-- 最新優惠輪播 -->
     <section class="container mx-auto px-4 py-12">
-      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
-        最新優惠
-      </h2>
+      <h2 class="text-3xl font-bold text-left mb-8 text-gray-800">最新優惠</h2>
       <div class="relative max-w-5xl mx-auto">
         <!-- 輪播圖容器 -->
-        <div class="relative h-[400px] rounded-lg overflow-hidden">
+        <div class="relative h-[400px] rounded-xl overflow-hidden">
           <transition name="fade" mode="out-in">
             <div
               :key="currentSlide"
               :class="['absolute inset-0', slides[currentSlide].bgColor]"
             >
-              <!-- 暫時使用漸層背景，不用圖片 -->
-              <div class="absolute inset-0 bg-black/20">
+              <!-- 背景圖片 -->
+              <img
+                :src="slides[currentSlide].image"
+                :alt="slides[currentSlide].title"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <!-- 遮罩層 -->
+              <div class="absolute inset-0 bg-black/40">
                 <div class="container mx-auto px-8 h-full flex items-center">
                   <div class="text-white max-w-xl">
                     <h3 class="text-3xl font-bold mb-4">
@@ -184,14 +178,14 @@
     </section>
 
     <!-- 加入會員專區 -->
-    <section
-      class="relative h-[500px] overflow-hidden my-12 bg-gradient-to-r from-gray-800 to-gray-900"
-    >
-      <!-- <img 
-        src="/picture/Luvo_leather shoes-1.jpg" 
-        alt="加入會員" 
-        class="w-full h-full object-cover"
-      /> -->
+    <section class="relative h-[500px] overflow-hidden my-12">
+      <!-- 背景圖片 -->
+      <img
+        src="/images/membership-banner.jpg"
+        alt="加入會員"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <!-- 遮罩層 -->
       <div class="absolute inset-0 bg-black/50 flex items-center">
         <div class="container mx-auto px-4">
           <div class="max-w-2xl text-white">
@@ -207,7 +201,7 @@
             <p class="text-sm text-gray-200">活動期間：即日起 – 6/30</p>
             <router-link
               to="/register"
-              class="inline-block mt-6 px-8 py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition-colors"
+              class="inline-block mt-6 px-8 py-3 bg-amber-800 text-white font-bold rounded-lg hover:bg-amber-900 transition-colors"
             >
               立即加入會員
             </router-link>
@@ -226,17 +220,17 @@
           v-for="category in categories"
           :key="category.name"
           :to="category.link"
-          class="relative h-64 rounded-lg overflow-hidden group bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center"
+          class="relative h-64 rounded-lg overflow-hidden group"
         >
-          <!-- 暫時使用圖示 -->
-          <div class="text-8xl">{{ category.icon }}</div>
-          <!-- <img 
-            :src="category.image" 
+          <!-- 背景圖片 -->
+          <img
+            :src="category.image"
             :alt="category.name"
-            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-          /> -->
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+          />
+          <!-- 遮罩層 -->
           <div
-            class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"
+            class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"
           >
             <div class="absolute top-4 left-4">
               <h3 class="text-2xl font-bold text-white">
@@ -256,23 +250,23 @@ import { ref, onMounted, onUnmounted } from "vue";
 // 輪播資料
 const slides = ref([
   {
-    image: "", // 暫時不用圖片
-    title: "質感升級，品味不凡！",
-    content: `活動期間：2/6 - 2/29<br>
-              全館滿NT$3,000再享免運優惠！<br>
-              (即日起至 2/29，精選皮鞋限時85折，最低 NT$2,380 起，讓您以最優價格享受經典工藝。)`,
+    image: "/images/promo-1.jpg",
+    title: "質感升級,品味不凡!",
+    content: `活動期間:2/6 - 2/29<br>
+              全館滿NT$3,000再享免運優惠!<br>
+              (即日起至 2/29,精選皮鞋限時85折,最低 NT$2,380 起,讓您以最優價格享受經典工藝。)`,
     bgColor: "bg-gradient-to-r from-red-900 to-red-700",
   },
   {
-    image: "",
+    image: "/images/promo-2.jpg",
     title: "新會員首購禮",
-    content: "註冊即享 NT$100 折扣券（滿 NT$1,000 可用）",
+    content: "註冊即享 NT$100 折扣券(滿 NT$1,000 可用)",
     bgColor: "bg-gradient-to-r from-blue-900 to-blue-700",
   },
   {
-    image: "",
+    image: "/images/promo-3.jpg",
     title: "品牌專屬優惠",
-    content: "每消費 NT$100 = 1 積分，累積可折抵現金，購物越多回饋越多！",
+    content: "每消費 NT$100 = 1 積分,累積可折抵現金,購物越多回饋越多!",
     bgColor: "bg-gradient-to-r from-purple-900 to-purple-700",
   },
 ]);
@@ -311,12 +305,36 @@ const stopAutoPlay = () => {
 
 // 熱門分類
 const categories = ref([
-  { name: "皮鞋", icon: "👞", link: "/products/leather-shoes" },
-  { name: "休閒鞋", icon: "👟", link: "/products/casual-shoes" },
-  { name: "靴子", icon: "🥾", link: "/products/boots" },
-  { name: "襪子", icon: "🧦", link: "/accessories/socks" },
-  { name: "皮帶", icon: "👔", link: "/accessories/belts" },
-  { name: "托特包", icon: "👜", link: "/accessories/bags" },
+  {
+    name: "皮鞋",
+    image: "/images/category-leather-shoes.jpg",
+    link: "/products/leather-shoes",
+  },
+  {
+    name: "休閒鞋",
+    image: "/images/category-casual-shoes.jpg",
+    link: "/products/casual-shoes",
+  },
+  {
+    name: "靴子",
+    image: "/images/category-boots.jpg",
+    link: "/products/boots",
+  },
+  {
+    name: "襪子",
+    image: "/images/category-socks.jpg",
+    link: "/accessories/socks",
+  },
+  {
+    name: "皮帶",
+    image: "/images/category-belts.jpg",
+    link: "/accessories/belts",
+  },
+  {
+    name: "托特包",
+    image: "/images/category-bags.jpg",
+    link: "/accessories/bags",
+  },
 ]);
 
 onMounted(() => {
