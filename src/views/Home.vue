@@ -212,9 +212,7 @@
 
     <!-- 熱門分類 -->
     <section class="container mx-auto px-4 py-12">
-      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
-        熱門分類
-      </h2>
+      <h2 class="text-3xl font-bold text-left mb-8 text-gray-800">熱門分類</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <router-link
           v-for="category in categories"
