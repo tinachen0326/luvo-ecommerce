@@ -40,14 +40,13 @@
           </h2>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- 福利 1 -->
+            <!-- 福利卡片 -->
             <div
               v-for="(benefit, index) in benefits"
               :key="index"
               class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               :style="{ animationDelay: `${index * 0.1}s` }"
             >
-              <div class="text-5xl mb-4 text-center">{{ benefit.icon }}</div>
               <h3 class="text-xl font-bold mb-3 text-center text-gray-800">
                 {{ benefit.title }}
               </h3>
@@ -107,7 +106,7 @@
         <button
           @click="loadMore"
           :disabled="loading"
-          class="px-8 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          class="px-8 py-3 bg-amber-800 text-white font-bold rounded-lg hover:bg-amber-900 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <span v-if="!loading">載入更多商品</span>
           <span v-else class="flex items-center gap-2">
@@ -139,9 +138,9 @@
         <p class="text-xl text-blue-100 mb-8">立即註冊，享受新會員專屬優惠！</p>
         <router-link
           to="/register"
-          class="inline-block px-12 py-4 bg-yellow-400 text-red-900 text-lg font-bold rounded-lg hover:bg-yellow-300 transition-all transform hover:scale-110 shadow-2xl"
+          class="inline-block px-12 py-4 bg-amber-800 text-white text-lg font-bold rounded-lg hover:bg-amber-900 transition-all transform hover:scale-110 shadow-2xl"
         >
-          馬上註冊 →
+          馬上註冊
         </router-link>
       </div>
     </section>
@@ -152,7 +151,7 @@
 import { ref, computed } from "vue";
 import ProductCard from "../components/business/ProductCard.vue";
 
-// ==================== 數據層 ====================
+// 數據層
 
 // 福利說明（靜態數據）
 const benefits = [
@@ -192,7 +191,6 @@ const products = ref([
     id: 201,
     name: "【Luvo】紳士格調經典牛津皮鞋",
     price: 6980,
-    icon: "👞",
     category: "leather-shoes",
     rating: 4.8,
     reviewCount: 128,
@@ -206,7 +204,6 @@ const products = ref([
     name: "【Luvo】摩登時尚簡約牛津皮鞋",
     price: 4980,
     discount: 15,
-    icon: "👞",
     category: "leather-shoes",
     rating: 4.5,
     reviewCount: 89,
@@ -218,7 +215,6 @@ const products = ref([
     id: 203,
     name: "【Luvo】復古風範雕花牛津皮鞋",
     price: 7980,
-    icon: "👞",
     category: "leather-shoes",
     rating: 4.9,
     reviewCount: 156,
@@ -231,7 +227,6 @@ const products = ref([
     id: 204,
     name: "【Luvo】登山防水耐磨戶外專業靴",
     price: 3480,
-    icon: "🥾",
     category: "boots",
     rating: 4.7,
     reviewCount: 92,
@@ -243,7 +238,6 @@ const products = ref([
     id: 205,
     name: "【Luvo】經典時尚百搭高質感短靴",
     price: 3980,
-    icon: "🥾",
     category: "boots",
     rating: 4.6,
     reviewCount: 74,
@@ -255,7 +249,6 @@ const products = ref([
     id: 206,
     name: "【Luvo】高筒時尚修飾腿型長靴款",
     price: 5980,
-    icon: "🥾",
     category: "boots",
     rating: 4.8,
     reviewCount: 108,
@@ -266,7 +259,7 @@ const products = ref([
   },
 ]);
 
-// ==================== 計算屬性（邏輯層）====================
+// 計算屬性（邏輯層）
 
 // 過濾後的商品（根據選擇的分類）
 const filteredProducts = computed(() => {
@@ -276,7 +269,7 @@ const filteredProducts = computed(() => {
   return products.value.filter((p) => p.category === selectedCategory.value);
 });
 
-// ==================== 方法（事件處理）====================
+// 方法（事件處理）
 
 // 載入更多商品
 const loadMore = () => {
