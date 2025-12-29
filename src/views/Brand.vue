@@ -4,6 +4,12 @@
     <section
       class="relative h-[500px] overflow-hidden bg-gradient-to-r from-purple-900 to-purple-700"
     >
+    <!-- 背景圖片-->
+    <img 
+        src="/images/brand-hero.jpg" 
+        alt="品牌專屬優惠" 
+        class="w-full h-full object-cover"
+      />
       <div class="absolute inset-0 bg-black/40 flex items-center">
         <div class="container mx-auto px-4">
           <div class="max-w-2xl text-white">
