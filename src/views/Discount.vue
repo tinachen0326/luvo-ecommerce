@@ -4,12 +4,12 @@
     <section
       class="relative h-[500px] overflow-hidden bg-gradient-to-r from-red-900 to-red-700"
     >
-      <!-- 背景圖（暫時用漸層） -->
-      <!-- <img 
-        src="/picture/Luvo_leather shoes-6.jpg" 
+      <!-- 背景圖片-->
+      <img 
+        src="/images/discount-hero.jpg" 
         alt="買2送1" 
         class="w-full h-full object-cover"
-      /> -->
+      />
       <div class="absolute inset-0 bg-black/30 flex items-center">
         <div class="container mx-auto px-4">
           <div class="max-w-2xl text-white">
