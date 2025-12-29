@@ -92,11 +92,11 @@ const buttonClasses = computed(() => {
 
   // 變體樣式
   const variantClasses = {
-    primary: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
+    primary: "bg-amber-800 text-white hover:bg-amber-900 focus:ring-amber-500",
     secondary: "bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500",
     outline:
-      "border-2 border-red-600 text-red-600 hover:bg-red-50 focus:ring-red-500",
-    text: "text-red-600 hover:bg-red-50 focus:ring-red-500",
+      "border-2 border-amber-800 text-amber-800 hover:bg-amber-50 focus:ring-amber-500",
+    text: "text-amber-800 hover:bg-amber-50 focus:ring-amber-500",
     danger: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
   };
   classes.push(variantClasses[props.variant]);
