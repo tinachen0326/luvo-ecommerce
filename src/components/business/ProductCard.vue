@@ -29,8 +29,8 @@
             :class="[
               'px-4 py-2 rounded-full transition-colors shadow-lg text-sm font-medium',
               isFavorited
-                ? 'bg-red-600 text-white'
-                : 'bg-white text-gray-800 hover:bg-red-600 hover:text-white',
+                ? 'bg-amber-800 text-white'
+                : 'bg-white text-gray-800 hover:bg-amber-800 hover:text-white',
             ]"
             title="加入收藏"
           >
