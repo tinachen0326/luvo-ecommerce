@@ -56,7 +56,7 @@
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
-            🎁 積分回饋機制
+             積分回饋機制
           </h2>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -112,7 +112,7 @@
       class="container mx-auto px-4 py-12"
     >
       <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
-        🎟️ 可領取的優惠券
+         可領取的優惠券
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -383,17 +383,14 @@ const cartStore = useCartStore();
 // 積分規則
 const pointRules = [
   {
-    icon: "💰",
     title: "消費賺積分",
     description: "每消費 $100 = 1 積分",
   },
   {
-    icon: "🎁",
     title: "積分折現金",
     description: "1 積分 = $1 折抵",
   },
   {
-    icon: "🚀",
     title: "永久有效",
     description: "積分永不過期，累積越多回饋越多",
   },
@@ -404,28 +401,24 @@ const memberLevels = [
   {
     name: "銅級",
     value: "bronze",
-    icon: "🥉",
     requirement: "$0+",
     benefit: "1倍積分",
   },
   {
     name: "銀級",
     value: "silver",
-    icon: "🥈",
     requirement: "$10,000+",
     benefit: "1.2倍積分",
   },
   {
     name: "金級",
     value: "gold",
-    icon: "🥇",
     requirement: "$30,000+",
     benefit: "1.5倍積分",
   },
   {
     name: "白金",
     value: "platinum",
-    icon: "💎",
     requirement: "$50,000+",
     benefit: "2倍積分",
   },
@@ -469,7 +462,6 @@ const products = ref([
     id: 301,
     name: "【Luvo】極致優雅紳士德比皮鞋",
     price: 2980,
-    icon: "👞",
     category: "leather-shoes",
     rating: 4.7,
     reviewCount: 85,
@@ -481,7 +473,6 @@ const products = ref([
     id: 302,
     name: "【Luvo】經典復古綁帶德比皮鞋",
     price: 3980,
-    icon: "👞",
     category: "leather-shoes",
     rating: 4.8,
     reviewCount: 96,
@@ -493,7 +484,6 @@ const products = ref([
     id: 303,
     name: "【Luvo】簡約百搭時尚牛津皮鞋",
     price: 2280,
-    icon: "👞",
     category: "leather-shoes",
     rating: 4.6,
     reviewCount: 72,
@@ -505,7 +495,6 @@ const products = ref([
     id: 304,
     name: "【Luvo】復古訂製簡約俐落長靴款",
     price: 2480,
-    icon: "🥾",
     category: "boots",
     rating: 4.5,
     reviewCount: 68,
@@ -517,7 +506,6 @@ const products = ref([
     id: 305,
     name: "【Luvo】溫暖包覆舒適透氣長靴款",
     price: 4980,
-    icon: "🥾",
     category: "boots",
     rating: 4.9,
     reviewCount: 112,
@@ -529,7 +517,6 @@ const products = ref([
     id: 306,
     name: "【Luvo】高筒設計支撐足部舒適靴",
     price: 4480,
-    icon: "🥾",
     category: "boots",
     rating: 4.8,
     reviewCount: 98,
