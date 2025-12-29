@@ -69,7 +69,7 @@
     >
       <!-- 商品名稱 -->
       <h3
-        class="text-base font-medium text-gray-800 mb-2 line-clamp-2 group-hover:text-red-600 transition-colors"
+        class="text-base font-medium text-gray-800 mb-2 line-clamp-2 group-hover:text-amber-800 transition-colors"
       >
         {{ product.name }}
       </h3>
