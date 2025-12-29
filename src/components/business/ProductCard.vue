@@ -29,8 +29,8 @@
             :class="[
               'px-4 py-2 rounded-full transition-colors shadow-lg text-sm font-medium',
               isFavorited
-                ? 'bg-red-600 text-white'
-                : 'bg-white text-gray-800 hover:bg-red-600 hover:text-white',
+                ? 'bg-amber-800 text-white'
+                : 'bg-white text-gray-800 hover:bg-amber-800 hover:text-white',
             ]"
             title="加入收藏"
           >
@@ -69,7 +69,7 @@
     >
       <!-- 商品名稱 -->
       <h3
-        class="text-base font-medium text-gray-800 mb-2 line-clamp-2 group-hover:text-red-600 transition-colors"
+        class="text-base font-medium text-gray-800 mb-2 line-clamp-2 group-hover:text-amber-800 transition-colors"
       >
         {{ product.name }}
       </h3>

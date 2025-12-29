@@ -4,21 +4,21 @@
     <section
       class="relative h-[500px] overflow-hidden bg-gradient-to-r from-red-900 to-red-700"
     >
-      <!-- 背景圖（暫時用漸層） -->
-      <!-- <img 
-        src="/picture/Luvo_leather shoes-6.jpg" 
+      <!-- 背景圖片-->
+      <img 
+        src="/images/discount-hero.jpg" 
         alt="買2送1" 
         class="w-full h-full object-cover"
-      /> -->
+      />
       <div class="absolute inset-0 bg-black/30 flex items-center">
         <div class="container mx-auto px-4">
           <div class="max-w-2xl text-white">
             <h1 class="text-5xl font-bold mb-4 animate-fade-in">買2送1</h1>
-            <p class="text-sm mb-4 opacity-90">(網頁為練習專案)</p>
+            <!-- <p class="text-sm mb-4 opacity-90">(網頁為練習專案)</p> -->
             <div class="text-xl leading-relaxed space-y-2 animate-slide-up">
               <p class="flex items-center gap-2">
                 <svg
-                  class="w-6 h-6 text-yellow-400"
+                  class="w-6 h-6 text-white"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -97,27 +97,27 @@
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">
-            🎉 活動辦法
+             活動辦法
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div
               class="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-xl transition-shadow"
             >
-              <div class="text-4xl mb-3">1️⃣</div>
+              <!-- <div class="text-4xl mb-3">1️</div> -->
               <h3 class="font-bold mb-2">選購 2 雙鞋款</h3>
               <p class="text-sm text-gray-600">從下方活動商品中挑選任意 2 雙</p>
             </div>
             <div
               class="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-xl transition-shadow"
             >
-              <div class="text-4xl mb-3">2️⃣</div>
+              <!-- <div class="text-4xl mb-3">2️</div> -->
               <h3 class="font-bold mb-2">自動贈送第 3 雙</h3>
               <p class="text-sm text-gray-600">系統將自動贈送價格最低的 1 雙</p>
             </div>
             <div
               class="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-xl transition-shadow"
             >
-              <div class="text-4xl mb-3">3️⃣</div>
+              <!-- <div class="text-4xl mb-3">3️</div> -->
               <h3 class="font-bold mb-2">滿額再享免運</h3>
               <p class="text-sm text-gray-600">消費滿 $3,000 即享免運優惠</p>
             </div>
@@ -170,7 +170,7 @@
             @click="addToCartPromotion"
             class="bg-yellow-400 text-red-900 px-6 py-2 rounded-lg font-bold hover:bg-yellow-300 transition-colors animate-pulse"
           >
-            立即加入購物車 🎁
+            立即加入購物車 
           </button>
         </div>
       </div>
@@ -356,7 +356,6 @@ const products = ref([
     id: 101,
     name: "【Luvo】紳士優雅手工牛津皮鞋",
     price: 2480,
-    icon: "👞",
     category: "leather-shoes",
     stock: 20,
   },
@@ -364,7 +363,6 @@ const products = ref([
     id: 102,
     name: "【Luvo】皇家典藏手工縫製牛津鞋",
     price: 3980,
-    icon: "👞",
     category: "leather-shoes",
     stock: 15,
   },
@@ -372,7 +370,6 @@ const products = ref([
     id: 103,
     name: "【Luvo】皮質細膩輕奢牛津皮鞋",
     price: 4280,
-    icon: "👞",
     category: "leather-shoes",
     stock: 18,
   },
@@ -380,7 +377,6 @@ const products = ref([
     id: 104,
     name: "【Luvo】質感設計輕量舒適短靴款",
     price: 2980,
-    icon: "🥾",
     category: "boots",
     stock: 12,
   },
@@ -388,7 +384,6 @@ const products = ref([
     id: 105,
     name: "【Luvo】奢華質感義式工藝長靴款",
     price: 3500,
-    icon: "🥾",
     category: "boots",
     stock: 10,
   },
@@ -396,7 +391,6 @@ const products = ref([
     id: 106,
     name: "【Luvo】溫潤皮革手感細膩短靴款",
     price: 3480,
-    icon: "🥾",
     category: "boots",
     stock: 14,
   },
