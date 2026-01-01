@@ -93,7 +93,7 @@
           <!-- 新會員專屬標籤 -->
           <template #badge>
             <span
-              class="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg animate-pulse"
+              class="absolute top-4 left-4 bg-gradient-to-r from-amber-600 to-amber-700 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg animate-pulse"
             >
               新會員專屬
             </span>
