@@ -2,12 +2,12 @@
   <div>
     <!-- Hero 形象圖 -->
     <section
-      class="relative h-[500px] overflow-hidden bg-gradient-to-r from-purple-900 to-purple-700"
+      class="relative h-[500px] overflow-hidden bg-gradient-to-r from-amber-900 to-amber-700"
     >
-    <!-- 背景圖片-->
-    <img 
-        src="/images/brand-hero.jpg" 
-        alt="品牌專屬優惠" 
+      <!-- 背景圖片-->
+      <img
+        src="/images/brand-hero.jpg"
+        alt="品牌專屬優惠"
         class="w-full h-full object-cover"
       />
       <div class="absolute inset-0 bg-black/40 flex items-center">
@@ -62,7 +62,7 @@
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
-             積分回饋機制
+            積分回饋機制
           </h2>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -118,7 +118,7 @@
       class="container mx-auto px-4 py-12"
     >
       <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
-         可領取的優惠券
+        可領取的優惠券
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
