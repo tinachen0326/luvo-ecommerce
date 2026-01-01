@@ -83,7 +83,7 @@
 
           <!-- 會員等級說明 -->
           <div
-            class="bg-gradient-to-r from-purple-600 to-purple-800 rounded-xl p-8 text-white"
+            class="bg-gradient-to-r from-amber-800 to-amber-900 rounded-xl p-8 text-white"
           >
             <h3 class="text-2xl font-bold mb-6 text-center">會員等級制度</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -193,7 +193,7 @@
 
           <select
             v-model="sortBy"
-            class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-800"
           >
             <option value="default">預設排序</option>
             <option value="price-asc">價格：低到高</option>
@@ -218,7 +218,7 @@
 
             <!-- 品牌專屬標籤 -->
             <div
-              class="absolute top-4 left-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg"
+              class="absolute top-4 left-4 bg-gradient-to-r bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg"
             >
               品牌專屬
             </div>
@@ -226,7 +226,7 @@
             <!-- 積分兌換標籤 -->
             <div
               v-if="product.pointsRequired"
-              class="absolute top-4 right-4 bg-yellow-400 text-purple-900 px-3 py-1 rounded-full text-xs font-bold shadow-lg"
+              class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg"
             >
               {{ product.pointsRequired }} 積分可兌換
             </div>
@@ -238,7 +238,7 @@
               <div class="flex gap-2">
                 <button
                   @click="toggleFavorite(product)"
-                  class="bg-white text-gray-800 p-3 rounded-full hover:bg-purple-600 hover:text-white transition-colors shadow-lg"
+                  class="bg-white text-gray-800 p-3 rounded-full hover:bg-amber-800 hover:text-white transition-colors shadow-lg"
                 >
                   <svg
                     class="w-5 h-5"
@@ -292,7 +292,7 @@
             <!-- 價格和積分 -->
             <div class="mb-3">
               <div class="flex items-center justify-between mb-1">
-                <span class="text-2xl font-bold text-purple-600">
+                <span class="text-2xl font-bold text-red-600">
                   ${{ product.price.toLocaleString("zh-TW") }}
                 </span>
                 <span v-if="product.earnPoints" class="text-sm text-gray-500">
@@ -316,7 +316,7 @@
             <div class="flex gap-2">
               <button
                 @click="addToCart(product, false)"
-                class="flex-1 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium"
+                class="flex-1 px-4 py-2 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition-colors font-medium"
               >
                 現金購買
               </button>
