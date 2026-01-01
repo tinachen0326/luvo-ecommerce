@@ -132,10 +132,29 @@
     </section>
 
     <!-- 註冊引導 CTA -->
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 py-16">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold text-white mb-4">還不是會員嗎？</h2>
-        <p class="text-xl text-blue-100 mb-8">立即註冊，享受新會員專屬優惠！</p>
+    <section class="relative w-full h-96 md:h-[500px] overflow-hidden">
+      <!-- 滿版橫幅圖片 -->
+      <img
+        src="/images/register-hero.jpg"
+        alt="註冊優惠"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <!-- 半透明遮罩層（可選，讓文字更清楚） -->
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+      <!-- 文字和按鈕內容 -->
+      <div
+        class="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center"
+      >
+        <h2
+          class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg"
+        >
+          還不是會員嗎？
+        </h2>
+        <p class="text-xl md:text-2xl text-white mb-8 drop-shadow-lg">
+          立即註冊，享受新會員專屬優惠！
+        </p>
         <router-link
           to="/register"
           class="inline-block px-12 py-4 bg-amber-800 text-white text-lg font-bold rounded-lg hover:bg-amber-900 transition-all transform hover:scale-110 shadow-2xl"
