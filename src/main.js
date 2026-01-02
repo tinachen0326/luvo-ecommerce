@@ -8,7 +8,7 @@ import BaseModal from "@/components/base/BaseModal.vue";
 import BasePagination from "@/components/base/BasePagination.vue";
 import BaseButton from "@/components/base/BaseButton.vue";
 import BaseInput from "@/components/base/BaseInput.vue";
-import BaseCard from "@/components/base/BaseCard.vue"
+import BasePagination from "@/components/base/BasePagination.vue"
 
 const app = createApp(App);
 const pinia = createPinia();
@@ -18,6 +18,7 @@ app.component("BaseModal", BaseModal);
 app.component("BasePagination", BasePagination);
 app.component("BaseButton" , BaseButton);
 app.component("BaseInput" , BaseInput);
+app.component("BasePagination" , BasePagination);
 
 app.use(pinia);
 app.use(router);
