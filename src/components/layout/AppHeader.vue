@@ -203,7 +203,7 @@
                   to="/login"
                   class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-t-lg"
                 >
-                  會員專區
+                  註冊/登入
                 </router-link>
               </li>
               <li>
@@ -348,7 +348,7 @@
               class="block py-2 text-white hover:bg-[#6d3540] rounded px-4"
               @click="closeMenu"
             >
-              會員專區
+              註冊/登入
             </router-link>
           </li>
 
