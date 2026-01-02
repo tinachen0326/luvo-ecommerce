@@ -4,7 +4,7 @@
         <!-- Logo 區域 -->
         <div class="text-center mb-8">
           <router-link to="/" class="inline-block">
-            <h1 class="text-4xl font-bold text-gray-900 mb-2">Luvo</h1>
+            <h1 class="text-4xl font-bold text-amber-900 mb-2">Luvo</h1>
           </router-link>
           <p class="text-gray-600">歡迎回來</p>
         </div>
