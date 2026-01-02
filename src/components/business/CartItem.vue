@@ -1,0 +1,278 @@
+<template>
+    <div class="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow duration-200">
+      <div class="flex flex-col sm:flex-row gap-4">
+        <!-- 商品圖片 -->
+        <div class="flex-shrink-0">
+          <router-link :to="`/products/${item.id}`">
+            <img
+              :src="item.image"
+              :alt="item.name"
+              class="w-full sm:w-24 h-24 object-cover rounded-lg hover:opacity-80 transition-opacity"
+            />
+          </router-link>
+        </div>
+  
+        <!-- 商品資訊 -->
+        <div class="flex-1 min-w-0">
+          <div class="flex justify-between items-start gap-4">
+            <div class="flex-1">
+              <!-- 商品名稱 -->
+              <router-link
+                :to="`/products/${item.id}`"
+                class="text-base font-medium text-gray-900 hover:text-amber-800 transition-colors line-clamp-2"
+              >
+                {{ item.name }}
+              </router-link>
+  
+              <!-- 商品規格 -->
+              <div class="mt-2 text-sm text-gray-600 space-y-1">
+                <div v-if="item.size">
+                  <span class="font-medium">尺寸：</span>
+                  <span>{{ item.size }}</span>
+                </div>
+                <div v-if="item.color">
+                  <span class="font-medium">顏色：</span>
+                  <span>{{ item.color }}</span>
+                </div>
+              </div>
+  
+              <!-- 價格（手機版顯示） -->
+              <div class="mt-2 sm:hidden">
+                <div class="flex items-center gap-2">
+                  <span class="text-xl font-bold text-amber-800">
+                    ${{ item.price.toLocaleString() }}
+                  </span>
+                  <span
+                    v-if="item.originalPrice && item.originalPrice > item.price"
+                    class="text-sm text-gray-500 line-through"
+                  >
+                    ${{ item.originalPrice.toLocaleString() }}
+                  </span>
+                </div>
+              </div>
+            </div>
+  
+            <!-- 刪除按鈕 -->
+            <button
+              @click="handleRemove"
+              class="flex-shrink-0 p-2 text-gray-400 hover:text-red-600 transition-colors"
+              title="移除商品"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                />
+              </svg>
+            </button>
+          </div>
+  
+          <!-- 數量與價格（桌面版） -->
+          <div class="hidden sm:flex items-center justify-between mt-4">
+            <!-- 數量選擇器 -->
+            <div class="flex items-center border border-gray-300 rounded-lg">
+              <button
+                @click="handleDecrement"
+                :disabled="item.quantity <= 1"
+                class="px-3 py-2 text-gray-600 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                </svg>
+              </button>
+  
+              <input
+                type="text"
+                :value="item.quantity"
+                @input="handleQuantityInput"
+                @blur="handleQuantityBlur"
+                class="w-12 text-center border-x border-gray-300 focus:outline-none"
+                min="1"
+                :max="maxQuantity"
+              />
+  
+              <button
+                @click="handleIncrement"
+                :disabled="item.quantity >= maxQuantity"
+                class="px-3 py-2 text-gray-600 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </button>
+            </div>
+  
+            <!-- 價格 -->
+            <div class="text-right">
+              <div class="flex items-center gap-2">
+                <span class="text-xl font-bold text-amber-800">
+                  ${{ (item.price * item.quantity).toLocaleString() }}
+                </span>
+                <span
+                  v-if="item.originalPrice && item.originalPrice > item.price"
+                  class="text-sm text-gray-500 line-through"
+                >
+                  ${{ (item.originalPrice * item.quantity).toLocaleString() }}
+                </span>
+              </div>
+              <div class="text-xs text-gray-500 mt-1">
+                單價 ${{ item.price.toLocaleString() }}
+              </div>
+            </div>
+          </div>
+  
+          <!-- 數量選擇器（手機版） -->
+          <div class="flex sm:hidden items-center justify-between mt-4">
+            <div class="flex items-center border border-gray-300 rounded-lg">
+              <button
+                @click="handleDecrement"
+                :disabled="item.quantity <= 1"
+                class="px-3 py-2 text-gray-600 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                </svg>
+              </button>
+  
+              <input
+                type="text"
+                :value="item.quantity"
+                @input="handleQuantityInput"
+                @blur="handleQuantityBlur"
+                class="w-12 text-center border-x border-gray-300 focus:outline-none"
+                min="1"
+                :max="maxQuantity"
+              />
+  
+              <button
+                @click="handleIncrement"
+                :disabled="item.quantity >= maxQuantity"
+                class="px-3 py-2 text-gray-600 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </button>
+            </div>
+  
+            <div class="text-right">
+              <div class="text-lg font-bold text-amber-800">
+                ${{ (item.price * item.quantity).toLocaleString() }}
+              </div>
+            </div>
+          </div>
+  
+          <!-- 庫存警告 -->
+          <div v-if="item.stock < 5" class="mt-2">
+            <span class="text-xs text-red-600">
+              ⚠️ 僅剩 {{ item.stock }} 件
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  <script setup>
+  import { ref, watch } from 'vue'
+  
+  const props = defineProps({
+    item: {
+      type: Object,
+      required: true,
+      validator: (value) => {
+        return (
+          value.id !== undefined &&
+          value.name !== undefined &&
+          value.price !== undefined &&
+          value.quantity !== undefined
+        )
+      }
+    },
+    maxQuantity: {
+      type: Number,
+      default: 99
+    }
+  })
+  
+  const emit = defineEmits(['update:quantity', 'remove'])
+  
+  const tempQuantity = ref(props.item.quantity)
+  
+  // 監聽 item.quantity 變化
+  watch(() => props.item.quantity, (newVal) => {
+    tempQuantity.value = newVal
+  })
+  
+  // 增加數量
+  const handleIncrement = () => {
+    if (props.item.quantity < props.maxQuantity) {
+      const newQuantity = props.item.quantity + 1
+      emit('update:quantity', {
+        id: props.item.id,
+        quantity: newQuantity
+      })
+    }
+  }
+  
+  // 減少數量
+  const handleDecrement = () => {
+    if (props.item.quantity > 1) {
+      const newQuantity = props.item.quantity - 1
+      emit('update:quantity', {
+        id: props.item.id,
+        quantity: newQuantity
+      })
+    }
+  }
+  
+  // 手動輸入數量
+  const handleQuantityInput = (event) => {
+    const value = event.target.value
+    // 只允許數字
+    if (/^\d*$/.test(value)) {
+      tempQuantity.value = value
+    } else {
+      event.target.value = tempQuantity.value
+    }
+  }
+  
+  // 失去焦點時驗證並更新數量
+  const handleQuantityBlur = (event) => {
+    let value = parseInt(event.target.value) || 1
+    
+    // 限制範圍
+    if (value < 1) {
+      value = 1
+    } else if (value > props.maxQuantity) {
+      value = props.maxQuantity
+    }
+    
+    tempQuantity.value = value
+    
+    if (value !== props.item.quantity) {
+      emit('update:quantity', {
+        id: props.item.id,
+        quantity: value
+      })
+    }
+  }
+  
+  // 移除商品
+  const handleRemove = () => {
+    if (confirm(`確定要移除「${props.item.name}」嗎？`)) {
+      emit('remove', props.item.id)
+    }
+  }
+  </script>
+  
+  <style scoped>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  </style>

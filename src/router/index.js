@@ -44,12 +44,12 @@ const routes = [
   //   component: () => import("../views/Accessories.vue"),
   //   meta: { title: "生活配件 | Luvo 履藝" },
   // },
-  // {
-  //   path: "/cart",
-  //   name: "Cart",
-  //   component: () => import("../views/Cart.vue"),
-  //   meta: { title: "購物車 | Luvo 履藝" },
-  // },
+  {
+    path: "/cart",
+    name: "Cart",
+    component: () => import("../views/Cart.vue"),
+    meta: { title: "購物車 | Luvo 履藝" },
+  },
   {
     path: "/login",
     name: "Login",
