@@ -101,7 +101,7 @@
                   id="remember"
                   v-model="form.remember"
                   type="checkbox"
-                  class="h-4 w-4 text-amber-800 focus:ring-amber-500 border-gray-300 rounded"
+                  class="h-4 w-4 text-bk-800 focus:ring-amber-500 border-gray-300 rounded"
                 />
                 <label for="remember" class="ml-2 block text-sm text-gray-700">
                   記住我
@@ -110,7 +110,7 @@
   
               <router-link
                 to="/forgot-password"
-                class="text-sm text-amber-800 hover:text-amber-900"
+                class="text-sm text-bk-800 hover:text-bk-900"
               >
                 忘記密碼？
               </router-link>
