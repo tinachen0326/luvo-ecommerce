@@ -9,7 +9,7 @@ import BasePagination from "@/components/base/BasePagination.vue";
 import BaseButton from "@/components/base/BaseButton.vue";
 import BaseInput from "@/components/base/BaseInput.vue";
 import BasePagination from "@/components/base/BasePagination.vue";
-import NotificationToast from "./components/base/NotificationToast.vue";
+import NotificationToast from "@/components/base/NotificationToast.vue";
 
 const app = createApp(App);
 const pinia = createPinia();
