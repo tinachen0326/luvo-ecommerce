@@ -50,12 +50,12 @@ const routes = [
   //   component: () => import("../views/Cart.vue"),
   //   meta: { title: "購物車 | Luvo 履藝" },
   // },
-  // {
-  //   path: "/login",
-  //   name: "Login",
-  //   component: () => import("../views/User/Login.vue"),
-  //   meta: { title: "登入 | Luvo 履藝" },
-  // },
+  {
+    path: "/login",
+    name: "Login",
+    component: () => import("../views/User/Login.vue"),
+    meta: { title: "登入 | Luvo 履藝" },
+  },
   // {
   //   path: "/register",
   //   name: "Register",
