@@ -8,7 +8,8 @@ import BaseModal from "@/components/base/BaseModal.vue";
 import BasePagination from "@/components/base/BasePagination.vue";
 import BaseButton from "@/components/base/BaseButton.vue";
 import BaseInput from "@/components/base/BaseInput.vue";
-import BasePagination from "@/components/base/BasePagination.vue"
+import BasePagination from "@/components/base/BasePagination.vue";
+import NotificationToast from "./components/base/NotificationToast.vue";
 
 const app = createApp(App);
 const pinia = createPinia();
@@ -19,6 +20,7 @@ app.component("BasePagination", BasePagination);
 app.component("BaseButton" , BaseButton);
 app.component("BaseInput" , BaseInput);
 app.component("BasePagination" , BasePagination);
+app.component("NotificationToast" , NotificationToast);
 
 app.use(pinia);
 app.use(router);
