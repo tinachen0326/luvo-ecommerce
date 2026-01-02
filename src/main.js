@@ -6,7 +6,7 @@ import App from "./App.vue";
 import BaseCard from "@/components/base/BaseCard.vue";
 import BaseModal from "@/components/base/BaseModal.vue";
 import BasePagination from "@/components/base/BasePagination.vue";
-import BaseButton from "./components/base/BaseButton.vue";
+import BaseButton from "@/components/base/BaseButton.vue";
 
 const app = createApp(App);
 const pinia = createPinia();
