@@ -68,12 +68,12 @@ const routes = [
     component: () => import("../views/User/ForgotPassword.vue"),
     meta: { title: "忘記密碼 | Luvo 履藝" },
   },
-  // {
-  //   path: "/profile",
-  //   name: "Profile",
-  //   component: () => import("../views/User/Profile.vue"),
-  //   meta: { title: "會員中心 | Luvo 履藝", requiresAuth: true },
-  // },
+  {
+    path: "/profile",
+    name: "Profile",
+    component: () => import("../views/User/Profile.vue"),
+    meta: { title: "會員中心 | Luvo 履藝", requiresAuth: true },
+  },
   // {
   //   path: "/orders",
   //   name: "Orders",
