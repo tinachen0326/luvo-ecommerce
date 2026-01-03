@@ -56,12 +56,18 @@ const routes = [
     component: () => import("../views/User/Login.vue"),
     meta: { title: "登入 | Luvo 履藝" },
   },
-  // {
-  //   path: "/register",
-  //   name: "Register",
-  //   component: () => import("../views/User/Register.vue"),
-  //   meta: { title: "註冊 | Luvo 履藝" },
-  // },
+  {
+    path: "/register",
+    name: "Register",
+    component: () => import("../views/User/Register.vue"),
+    meta: { title: "註冊 | Luvo 履藝" },
+  },
+  {
+    path: "/forgot-password",
+    name: "ForgotPassword",
+    component: () => import("../views/User/ForgotPassword.vue"),
+    meta: { title: "忘記密碼 | Luvo 履藝" },
+  },
   // {
   //   path: "/profile",
   //   name: "Profile",
