@@ -4,9 +4,36 @@
   >
     <!-- 商品圖片區 -->
     <div class="relative aspect-square overflow-hidden bg-gray-100">
-      <!-- 商品圖片佔位 -->
-      <div class="w-full h-full flex items-center justify-center bg-gray-200">
-        <span class="text-gray-400 text-sm">商品圖片</span>
+      <!-- 商品圖片 -->
+      <img
+        v-if="product.image || product.id"
+        :src="getProductImage()"
+        :alt="product.name"
+        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+        @error="handleImageError"
+      />
+
+      <!-- 圖片載入失敗時的佔位圖 -->
+      <div
+        v-else
+        class="w-full h-full flex items-center justify-center bg-gray-200"
+      >
+        <div class="text-center">
+          <svg
+            class="w-16 h-16 text-gray-400 mx-auto mb-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+            />
+          </svg>
+          <span class="text-gray-400 text-sm">商品圖片</span>
+        </div>
       </div>
 
       <!-- Hover 遮罩和快速操作 -->
@@ -152,10 +179,13 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(["quick-view"]);
+const emit = defineEmits(["quick-view", "add-to-cart", "toggle-favorite"]);
 
 // 是否加入購物車中
 const isAddingToCart = ref(false);
+
+// 圖片載入失敗標記
+const imageError = ref(false);
 
 // 是否已收藏（從 userStore 獲取）
 const isFavorited = computed(() => {
@@ -169,6 +199,25 @@ const finalPrice = computed(() => {
   }
   return props.product.price;
 });
+
+// 獲取商品圖片路徑
+const getProductImage = () => {
+  // 優先使用 product.image
+  if (props.product.image) {
+    return props.product.image;
+  }
+
+  // 如果沒有 image 屬性，使用 product.id 生成圖片路徑
+  // 假設圖片命名規則為: product-{id}.jpg
+  return `/images/product-${props.product.id}.jpg`;
+};
+
+// 處理圖片載入錯誤
+const handleImageError = (event) => {
+  imageError.value = true;
+  // 設定預設圖片或顯示佔位符
+  event.target.src = "/images/placeholder.jpg"; // 可選：設定預設圖片
+};
 
 // 格式化價格
 const formatPrice = (price) => {
@@ -190,7 +239,6 @@ const addToCart = async () => {
 
 // 切換收藏
 const toggleFavorite = () => {
-  isFavorited.value = !isFavorited.value;
   emit("toggle-favorite", props.product);
 };
 </script>
