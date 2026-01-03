@@ -68,12 +68,12 @@ const routes = [
     component: () => import("../views/User/ForgotPassword.vue"),
     meta: { title: "忘記密碼 | Luvo 履藝" },
   },
-  {
-    path: "/profile",
-    name: "Profile",
-    component: () => import("../views/User/Profile.vue"),
-    meta: { title: "會員中心 | Luvo 履藝", requiresAuth: true },
-  },
+  // {
+  //   path: "/profile",
+  //   name: "Profile",
+  //   component: () => import("../views/User/Profile.vue"),
+  //   meta: { title: "會員中心 | Luvo 履藝", requiresAuth: true },
+  // },
   // {
   //   path: "/orders",
   //   name: "Orders",
@@ -98,6 +98,29 @@ const routes = [
   //   component: () => import("../views/Checkout.vue"),
   //   meta: { title: "結帳 | Luvo 履藝", requiresAuth: true },
   // },
+  {
+    path: "/user",
+    children: [
+      {
+        path: "profile",
+        name: "Profile",
+        component: () => import("@/views/User/Profile.vue"),
+        meta: { requiresAuth: true },
+      },
+      {
+        path: "orders",
+        name: "Orders",
+        component: () => import("@/views/User/Orders.vue"),
+        meta: { requiresAuth: true },
+      },
+      // {
+      //   path: "orders/:id",
+      //   name: "OrderDetail",
+      //   component: () => import("@/views/User/OrderDetail.vue"),
+      //   meta: { requiresAuth: true },
+      // },
+    ],
+  },
 ];
 
 const router = createRouter({

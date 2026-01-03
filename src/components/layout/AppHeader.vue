@@ -180,7 +180,7 @@
             <button
               class="text-white hover:text-gray-200 transition-colors font-medium flex items-center"
             >
-              註冊/登入
+              會員專區
               <svg
                 class="w-4 h-4 ml-1"
                 fill="none"
@@ -204,6 +204,30 @@
                   class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-t-lg"
                 >
                   註冊/登入
+                </router-link>
+              </li>
+              <li>
+                <router-link
+                  to="/profile"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-t-lg"
+                >
+                  個人資料
+                </router-link>
+              </li>
+              <li>
+                <router-link
+                  to="/orders"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-t-lg"
+                >
+                  訂單查詢
+                </router-link>
+              </li>
+              <li>
+                <router-link
+                  to="/favorites"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                >
+                  收藏清單
                 </router-link>
               </li>
               <li>
