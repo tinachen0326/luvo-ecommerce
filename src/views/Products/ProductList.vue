@@ -281,8 +281,10 @@ import { ref, computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import ProductCard from "../../components/business/ProductCard.vue";
 import BaseButton from "../../components/base/BaseButton.vue";
+import { useProductStore } from "@/stores/useProductStore";
 
 const route = useRoute();
+const productStore = useProductStore();
 
 // 商品資料
 const products = ref([]);
