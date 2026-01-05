@@ -578,7 +578,7 @@ const claimCoupon = (coupon) => {
   coupon.claimed = true;
   cartStore.showNotification(`成功領取 $${coupon.value} 優惠券！`, "success");
 
-  // 這裡可以加入實際的 API 請求
+  // 這裡加入實際的 API 請求
 };
 
 // 加入購物車
