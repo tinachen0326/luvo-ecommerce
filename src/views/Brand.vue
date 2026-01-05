@@ -214,7 +214,11 @@
           <div
             class="relative aspect-square overflow-hidden bg-gray-100 flex items-center justify-center"
           >
-            <div class="text-6xl">{{ product.icon }}</div>
+          <img 
+          :src="product.image" 
+          :alt="product.name"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
 
             <!-- 品牌專屬標籤 -->
             <div
@@ -371,7 +375,7 @@
           to="/login"
           class="inline-block px-12 py-4 bg-yellow-400 text-purple-900 text-lg font-bold rounded-lg hover:bg-yellow-300 transition-all transform hover:scale-110 shadow-2xl"
         >
-          立即登入 →
+          立即登入
         </router-link>
       </div>
     </section>
@@ -468,6 +472,7 @@ const products = ref([
     id: 301,
     name: "【Luvo】極致優雅紳士德比皮鞋",
     price: 2980,
+    image: '/images/product-1.jpg',
     category: "leather-shoes",
     rating: 4.7,
     reviewCount: 85,
@@ -479,6 +484,7 @@ const products = ref([
     id: 302,
     name: "【Luvo】經典復古綁帶德比皮鞋",
     price: 3980,
+    image: '/images/product-2.jpg',
     category: "leather-shoes",
     rating: 4.8,
     reviewCount: 96,
@@ -490,6 +496,7 @@ const products = ref([
     id: 303,
     name: "【Luvo】簡約百搭時尚牛津皮鞋",
     price: 2280,
+    image: '/images/product-3.jpg',
     category: "leather-shoes",
     rating: 4.6,
     reviewCount: 72,
@@ -501,6 +508,7 @@ const products = ref([
     id: 304,
     name: "【Luvo】復古訂製簡約俐落長靴款",
     price: 2480,
+    image: '/images/product-4.jpg',
     category: "boots",
     rating: 4.5,
     reviewCount: 68,
@@ -512,6 +520,7 @@ const products = ref([
     id: 305,
     name: "【Luvo】溫暖包覆舒適透氣長靴款",
     price: 4980,
+    image: '/images/product-5.jpg',
     category: "boots",
     rating: 4.9,
     reviewCount: 112,
@@ -523,6 +532,7 @@ const products = ref([
     id: 306,
     name: "【Luvo】高筒設計支撐足部舒適靴",
     price: 4480,
+    image: '/images/product-6.jpg',
     category: "boots",
     rating: 4.8,
     reviewCount: 98,
