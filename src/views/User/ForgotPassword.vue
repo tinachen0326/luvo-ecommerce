@@ -157,7 +157,7 @@
           <div
             class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6 text-left"
           >
-            <h3 class="font-medium text-blue-900 mb-2">📧 接下來該做什麼？</h3>
+            <h3 class="font-medium text-blue-900 mb-2">接下來該做什麼？</h3>
             <ol
               class="text-sm text-blue-800 space-y-1 list-decimal list-inside"
             >
@@ -191,7 +191,7 @@
 
           <!-- 提示訊息 -->
           <div class="mt-6 text-xs text-gray-500">
-            <p>📮 沒收到郵件？</p>
+            <p>沒收到郵件？</p>
             <p class="mt-1">請檢查垃圾郵件資料夾，或稍後再試</p>
           </div>
         </div>

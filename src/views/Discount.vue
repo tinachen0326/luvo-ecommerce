@@ -93,7 +93,7 @@
     </section>
 
     <!-- 活動說明 -->
-    <section class="bg-yellow-50 py-8">
+    <section class="bg-white py-8">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">
