@@ -253,19 +253,19 @@ const slides = ref([
     content: `活動期間:2/6 - 2/29<br>
               全館滿NT$3,000再享免運優惠!<br>
               (即日起至 2/29,精選皮鞋限時85折,最低 NT$2,380 起,讓您以最優價格享受經典工藝。)`,
-    bgColor: "bg-gradient-to-r from-red-900 to-red-700",
+    bgColor: "bg-gradient-to-r from-amber-900 to-amber-700",
   },
   {
     image: "/images/promo-2.jpg",
     title: "新會員首購禮",
     content: "註冊即享 NT$100 折扣券(滿 NT$1,000 可用)",
-    bgColor: "bg-gradient-to-r from-blue-900 to-blue-700",
+    bgColor: "bg-gradient-to-r from-amber-900 to-amber-700",
   },
   {
     image: "/images/promo-3.jpg",
     title: "品牌專屬優惠",
     content: "每消費 NT$100 = 1 積分,累積可折抵現金,購物越多回饋越多!",
-    bgColor: "bg-gradient-to-r from-purple-900 to-purple-700",
+    bgColor: "bg-gradient-to-r from-amber-900 to-amber-700",
   },
 ]);
 

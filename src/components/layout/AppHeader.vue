@@ -367,13 +367,15 @@
           </li>
 
           <li>
-            <router-link
+            <div class="text-white font-medium px-4 py-2">
+              <router-link
               to="/login"
               class="block py-2 text-white hover:bg-[#6d3540] rounded px-4"
               @click="closeMenu"
             >
               註冊/登入
             </router-link>
+            </div>
           </li>
 
           <li>
