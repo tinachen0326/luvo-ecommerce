@@ -221,10 +221,10 @@
   <script setup>
   import { ref, reactive } from 'vue'
   import { useRouter } from 'vue-router'
-  // import { useUserStore } from '@/stores/useUserStore'
+  import { useUserStore } from '@/stores/useUserStore'
   
   const router = useRouter()
-  // const userStore = useUserStore()
+  const userStore = useUserStore()
   
   // 表單資料
   const form = reactive({
