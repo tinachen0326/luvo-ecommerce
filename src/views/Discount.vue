@@ -205,12 +205,15 @@
           ]"
           @click="toggleSelection(product)"
         >
-          <!-- 商品圖 -->
-          <div
+           <!-- 商品圖 -->
+           <div
             class="relative aspect-square overflow-hidden bg-gray-100 flex items-center justify-center"
           >
-            <!-- 暫時用表情符號 -->
-            <div class="text-6xl">{{ product.icon }}</div>
+          <img 
+          :src="product.image" 
+          :alt="product.name"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
 
             <!-- 已選標記 -->
             <div
@@ -356,6 +359,7 @@ const products = ref([
     id: 101,
     name: "【Luvo】紳士優雅手工牛津皮鞋",
     price: 2480,
+    image: '/images/product-1.jpg',
     category: "leather-shoes",
     stock: 20,
   },
@@ -363,6 +367,7 @@ const products = ref([
     id: 102,
     name: "【Luvo】皇家典藏手工縫製牛津鞋",
     price: 3980,
+    image: '/images/product-2.jpg',
     category: "leather-shoes",
     stock: 15,
   },
@@ -370,6 +375,7 @@ const products = ref([
     id: 103,
     name: "【Luvo】皮質細膩輕奢牛津皮鞋",
     price: 4280,
+    image: '/images/product-3.jpg',
     category: "leather-shoes",
     stock: 18,
   },
@@ -377,6 +383,7 @@ const products = ref([
     id: 104,
     name: "【Luvo】質感設計輕量舒適短靴款",
     price: 2980,
+    image: '/images/product-4.jpg',
     category: "boots",
     stock: 12,
   },
@@ -384,6 +391,7 @@ const products = ref([
     id: 105,
     name: "【Luvo】奢華質感義式工藝長靴款",
     price: 3500,
+    image: '/images/product-5.jpg',
     category: "boots",
     stock: 10,
   },
@@ -391,6 +399,7 @@ const products = ref([
     id: 106,
     name: "【Luvo】溫潤皮革手感細膩短靴款",
     price: 3480,
+    image: '/images/product-6.jpg',
     category: "boots",
     stock: 14,
   },
