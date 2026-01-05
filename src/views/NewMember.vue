@@ -140,7 +140,7 @@
         class="absolute inset-0 w-full h-full object-cover"
       />
 
-      <!-- 半透明遮罩層（可選，讓文字更清楚） -->
+      <!-- 半透明遮罩層 -->
       <div class="absolute inset-0 bg-black bg-opacity-40"></div>
 
       <!-- 文字和按鈕內容 -->
@@ -296,7 +296,7 @@ const loadMore = () => {
 
   // 模擬 API 請求
   setTimeout(() => {
-    // 這裡可以添加更多商品到 products 陣列
+    // 可以添加更多商品到 products 陣列
     // products.value.push(...newProducts)
 
     loading.value = false;
