@@ -373,7 +373,7 @@
         </p>
         <router-link
           to="/login"
-          class="inline-block px-12 py-4 bg-yellow-400 text-purple-900 text-lg font-bold rounded-lg hover:bg-yellow-300 transition-all transform hover:scale-110 shadow-2xl"
+          class="inline-block px-12 py-4 bg-amber-800 text-white text-lg font-bold rounded-lg hover:bg-amber-900 transition-all transform hover:scale-110 shadow-2xl"
         >
           立即登入
         </router-link>
