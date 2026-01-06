@@ -367,36 +367,36 @@
           </li>
 
           <li>
-            <div class="text-white font-medium px-4 py-2">
-              <ul class="pl-8 space-y-1">註冊/登入</ul>
-                <li>
-                  <router-link
+            <div class="text-white font-medium px-4 py-2">註冊/登入</div>
+            <ul class="pl-8 space-y-1">
+              <li>
+                <router-link
                   to="/profile"
-                  class="block py-2 text-white hover:bg-[#6d3540] rounded px-4"
-                   @click="closeMenu"
+                  class="block py-2 text-white text-sm hover:bg-[#6d3540] rounded px-4"
+                  @click="closeMenu"
                 >
-                   個人資料
+                  個人資料
                 </router-link>
-                </li>
-                <li>
-                  <router-link
+              </li>
+              <li>
+                <router-link
                   to="/orders"
-                  class="block py-2 text-white hover:bg-[#6d3540] rounded px-4"
-                   @click="closeMenu"
+                  class="block py-2 text-white text-sm hover:bg-[#6d3540] rounded px-4"
+                  @click="closeMenu"
                 >
-                   訂單查詢
+                  訂單查詢
                 </router-link>
-                </li>
-                <li>
-                  <router-link
-                  to="/favorite"
-                  class="block py-2 text-white hover:bg-[#6d3540] rounded px-4"
-                   @click="closeMenu"
+              </li>
+              <li>
+                <router-link
+                  to="/favorites"
+                  class="block py-2 text-white text-sm hover:bg-[#6d3540] rounded px-4"
+                  @click="closeMenu"
                 >
-                   收藏清單
+                  收藏清單
                 </router-link>
-                </li>
-            </div>
+              </li>
+            </ul>
           </li>
 
           <li>
