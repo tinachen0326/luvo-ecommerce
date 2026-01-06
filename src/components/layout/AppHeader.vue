@@ -368,16 +368,7 @@
 
           <li>
             <div class="text-white font-medium px-4 py-2">
-              <ul class="pl-8 space-y-1">
-                <li>
-                  <router-link
-                  to="/login"
-                  class="block py-2 text-white hover:bg-[#6d3540] rounded px-4"
-                   @click="closeMenu"
-                >
-                   註冊/登入
-                </router-link>
-                </li>
+              <ul class="pl-8 space-y-1">註冊/登入</ul>
                 <li>
                   <router-link
                   to="/profile"
@@ -405,9 +396,6 @@
                    收藏清單
                 </router-link>
                 </li>
-
-              </ul>
-           
             </div>
           </li>
 
