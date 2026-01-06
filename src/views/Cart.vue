@@ -110,7 +110,7 @@
                   </button>
                 </div>
                 <p v-if="appliedCoupon" class="mt-2 text-sm text-green-600">
-                  ✓ 已套用優惠券：{{ appliedCoupon.code }}
+                   已套用優惠券：{{ appliedCoupon.code }}
                 </p>
               </div>
   
@@ -147,7 +147,7 @@
   
                 <!-- 免運提示 -->
                 <div v-if="subtotal < freeShippingThreshold" class="text-xs text-gray-600 bg-gray-50 rounded p-2">
-                  💡 再消費 ${{ (freeShippingThreshold - subtotal).toLocaleString() }} 即可享免運
+                   再消費 ${{ (freeShippingThreshold - subtotal).toLocaleString() }} 即可享免運
                 </div>
               </div>
   
