@@ -533,7 +533,7 @@ const handleResetPassword = async () => {
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     // 模擬成功
-    alert("✓ 密碼重設成功！");
+    alert("密碼重設成功！");
     router.push("/login");
   } catch (error) {
     errorMessage.value = "重設失敗，請重新嘗試";
