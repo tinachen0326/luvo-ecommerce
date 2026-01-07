@@ -68,6 +68,7 @@ const routes = [
     component: () => import("../views/User/ForgotPassword.vue"),
     meta: { title: "忘記密碼 | Luvo 履藝" },
   },
+
   // {
   //   path: "/profile",
   //   name: "Profile",
@@ -98,6 +99,24 @@ const routes = [
   //   component: () => import("../views/Checkout.vue"),
   //   meta: { title: "結帳 | Luvo 履藝", requiresAuth: true },
   // },
+  {
+    path: "/admin",
+    component: () => import("@/views/Admin/AdminLayout.vue"), // 管理後台佈局
+    meta: { requiresAuth: true, requiresAdmin: true },
+    children: [
+      {
+        path: "dashboard",
+        name: "AdminDashboard",
+        component: () => import("@/views/Admin/Dashboard.vue"),
+      },
+      {
+        path: "products",
+        name: "ProductManage",
+        component: () => import("@/views/Admin/ProductManage.vue"),
+      },
+      // ... 其他管理頁面
+    ],
+  },
   {
     path: "/user",
     children: [
