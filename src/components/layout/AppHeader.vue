@@ -208,7 +208,7 @@
               </li>
               <li>
                 <router-link
-                  to="/profile"
+                  to="/user/profile"
                   class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-t-lg"
                 >
                   個人資料
@@ -216,7 +216,7 @@
               </li>
               <li>
                 <router-link
-                  to="/orders"
+                  to="/user/orders"
                   class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-t-lg"
                 >
                   訂單查詢
@@ -224,7 +224,7 @@
               </li>
               <li>
                 <router-link
-                  to="/favorites"
+                  to="/user/favorites"
                   class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                 >
                   收藏清單
@@ -371,7 +371,7 @@
             <ul class="pl-8 space-y-1">
               <li>
                 <router-link
-                  to="/profile"
+                  to="/user/profile"
                   class="block py-2 text-white text-sm hover:bg-[#6d3540] rounded px-4"
                   @click="closeMenu"
                 >
@@ -380,7 +380,7 @@
               </li>
               <li>
                 <router-link
-                  to="/orders"
+                  to="/user/orders"
                   class="block py-2 text-white text-sm hover:bg-[#6d3540] rounded px-4"
                   @click="closeMenu"
                 >
