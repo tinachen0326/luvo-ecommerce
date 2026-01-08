@@ -2,7 +2,7 @@
   <div>
     <!-- 買2送1形象圖 -->
     <section
-      class="relative h-[500px] overflow-hidden bg-gradient-to-r from-red-900 to-red-700"
+      class="relative h-[500px] overflow-hidden bg-gradient-to-r from-amber-900 to-amber-700"
     >
       <!-- 背景圖片-->
       <img 
