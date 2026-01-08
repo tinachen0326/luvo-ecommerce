@@ -330,7 +330,7 @@
                   userStore.availablePoints >= product.pointsRequired
                 "
                 @click="addToCart(product, true)"
-                class="flex-1 px-4 py-2 bg-yellow-400 text-purple-900 rounded-lg hover:bg-yellow-300 transition-colors font-medium"
+                class="flex-1 px-4 py-2 bg-yellow-400 text-amber-900 rounded-lg hover:bg-yellow-300 transition-colors font-medium"
               >
                 積分兌換
               </button>
@@ -361,13 +361,13 @@
     <!-- 登入提示 -->
     <section
       v-if="!userStore.isAuthenticated"
-      class="bg-gradient-to-r from-purple-600 to-purple-800 py-16"
+      class="bg-gradient-to-r from-amber-600 to-amber-800 py-16"
     >
       <div class="container mx-auto px-4 text-center">
         <h2 class="text-4xl font-bold text-white mb-4">
           立即登入，開始累積積分！
         </h2>
-        <p class="text-xl text-purple-100 mb-8">
+        <p class="text-xl text-amber-100 mb-8">
           登入會員即可享受積分回饋和專屬優惠
         </p>
         <router-link
