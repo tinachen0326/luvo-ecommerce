@@ -124,7 +124,7 @@
         <div
           v-for="coupon in availableCoupons"
           :key="coupon.id"
-          class="relative bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+          class="relative bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <!-- 優惠券樣式裝飾 -->
           <div
@@ -162,7 +162,7 @@
                 'w-full py-2 rounded-lg font-bold transition-all',
                 coupon.claimed
                   ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-yellow-400 text-purple-900 hover:bg-yellow-300',
+                  : 'bg-yellow-400 text-amber-900 hover:bg-yellow-300',
               ]"
             >
               {{ coupon.claimed ? "已領取" : "立即領取" }}
@@ -183,7 +183,7 @@
             <input
               type="checkbox"
               v-model="showOnlyPointsRedeemable"
-              class="w-5 h-5 rounded text-purple-600 focus:ring-purple-500"
+              class="w-5 h-5 rounded text-amber-600 focus:ring-amber-500"
             />
             <span class="text-sm font-medium text-gray-700"
               >只顯示可用積分兌換</span
