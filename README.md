@@ -10,7 +10,7 @@ Luvo 履藝皮鞋是一個前端電商練習專案，使用 Vue.js 3 及現代�
 
 ## 專案網址
 
-luvo-ecommerce.vercel.app
+[luvo-ecommerce.vercel.app](https://luvo-ecommerce.vercel.app/)
 
 ## 測試登入的帳號密碼
 - Email: demo@luvo.com
