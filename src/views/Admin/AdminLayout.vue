@@ -97,14 +97,14 @@
               class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
             >
               <router-link
-                to="/admin/profile"
+                to="/user/profile"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
                 @click="showUserMenu = false"
               >
                 個人資料
               </router-link>
               <router-link
-                to="/admin/settings"
+                to="/user/settings"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
                 @click="showUserMenu = false"
               >
@@ -240,7 +240,7 @@
               to="/admin/orders"
               :class="[
                 'flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors',
-                isActive('/admin/orders')
+                isActive('/user/orders')
                   ? 'bg-amber-50 text-amber-800'
                   : 'text-gray-600 hover:bg-gray-50',
               ]"
