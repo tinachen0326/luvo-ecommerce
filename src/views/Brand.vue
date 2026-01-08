@@ -16,7 +16,6 @@
             <h1 class="text-5xl font-bold mb-4 animate-fade-in">
               品牌專屬優惠
             </h1>
-            <!-- <p class="text-sm mb-4 opacity-90">(網頁為練習專案)</p> -->
             <p class="text-2xl leading-relaxed animate-slide-up">
               每消費 NT$100 = 1 積分，累積可折抵現金，購物越多回饋越多！
             </p>
@@ -312,7 +311,7 @@
                 "
                 class="text-sm text-green-600 font-medium"
               >
-                ✓ 可使用 {{ product.pointsRequired }} 積分兌換
+                 可使用 {{ product.pointsRequired }} 積分兌換
               </div>
             </div>
 

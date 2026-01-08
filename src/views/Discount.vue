@@ -14,7 +14,6 @@
         <div class="container mx-auto px-4">
           <div class="max-w-2xl text-white">
             <h1 class="text-5xl font-bold mb-4 animate-fade-in">買2送1</h1>
-            <!-- <p class="text-sm mb-4 opacity-90">(網頁為練習專案)</p> -->
             <div class="text-xl leading-relaxed space-y-2 animate-slide-up">
               <p class="flex items-center gap-2">
                 <svg

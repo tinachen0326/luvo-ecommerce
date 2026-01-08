@@ -13,7 +13,6 @@
         <div class="container mx-auto px-4">
           <div class="max-w-2xl text-white">
             <h1 class="text-5xl font-bold mb-4">「Love Your Step」</h1>
-            <!-- <p class="text-lg leading-relaxed mb-2">(網頁為練習專案)</p> -->
             <p class="text-lg leading-relaxed">
               Luvo 的誕生源自創辦人對細節與生活品質的執著。<br />
               品牌旨在以創新的設計理念重新定義「皮鞋工藝」，<br />
