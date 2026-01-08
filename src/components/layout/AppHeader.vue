@@ -248,13 +248,22 @@
               </li>
             </ul>
           </li>
-
+          
           <li>
             <router-link
               to="/stores"
               class="text-white hover:text-gray-200 transition-colors font-medium"
             >
               門市查詢
+            </router-link>
+          </li>
+
+          <li>
+            <router-link
+              to="/admin/dashboard"
+              class="text-white hover:text-gray-200 transition-colors font-medium"
+            >
+              管理後台
             </router-link>
           </li>
         </ul>
@@ -406,6 +415,14 @@
               @click="closeMenu"
             >
               購物車
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/admin/dashboard"
+              class="text-white hover:text-gray-200 transition-colors font-medium"
+            >
+              管理後台
             </router-link>
           </li>
         </ul>
