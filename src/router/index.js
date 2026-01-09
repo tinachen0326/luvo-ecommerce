@@ -68,6 +68,11 @@ const routes = [
     component: () => import("../views/User/ForgotPassword.vue"),
     meta: { title: "忘記密碼 | Luvo 履藝" },
   },
+  {
+    path: 'orders',
+    name: 'OrderManage',
+    component: () => import('@/views/Admin/OrderManage.vue')
+  },
 
   // {
   //   path: "/profile",
