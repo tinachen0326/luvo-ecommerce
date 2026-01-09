@@ -69,7 +69,7 @@ const routes = [
     meta: { title: "忘記密碼 | Luvo 履藝" },
   },
   {
-    path: 'orders',
+    path: '/orders',
     name: 'OrderManage',
     component: () => import('@/views/Admin/OrderManage.vue')
   },
