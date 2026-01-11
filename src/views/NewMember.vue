@@ -210,7 +210,7 @@ const products = ref([
     id: 101,
     name: "【Luvo】紳士格調經典牛津皮鞋",
     price: 6980,
-    image: '/images/product-1.jpg',
+    image: "/images/product-1.jpg",
     category: "leather-shoes",
     rating: 4.8,
     reviewCount: 128,
@@ -223,7 +223,7 @@ const products = ref([
     id: 102,
     name: "【Luvo】摩登時尚簡約牛津皮鞋",
     price: 4980,
-    image: '/images/product-2.jpg',
+    image: "/images/product-2.jpg",
     discount: 15,
     category: "leather-shoes",
     rating: 4.5,
@@ -236,7 +236,7 @@ const products = ref([
     id: 103,
     name: "【Luvo】復古風範雕花牛津皮鞋",
     price: 7980,
-    image: '/images/product-3.jpg',
+    image: "/images/product-3.jpg",
     category: "leather-shoes",
     rating: 4.9,
     reviewCount: 156,
@@ -249,7 +249,7 @@ const products = ref([
     id: 104,
     name: "【Luvo】登山防水耐磨戶外專業靴",
     price: 3480,
-    image: '/images/product-4.jpg',
+    image: "/images/product-4.jpg",
     category: "boots",
     rating: 4.7,
     reviewCount: 92,
@@ -261,7 +261,7 @@ const products = ref([
     id: 105,
     name: "【Luvo】經典時尚百搭高質感短靴",
     price: 3980,
-    image: '/images/product-5.jpg',
+    image: "/images/product-5.jpg",
     category: "boots",
     rating: 4.6,
     reviewCount: 74,
@@ -273,7 +273,7 @@ const products = ref([
     id: 106,
     name: "【Luvo】高筒時尚修飾腿型長靴款",
     price: 5980,
-    image: '/images/product-6.jpg',
+    image: "/images/product-6.jpg",
     category: "boots",
     rating: 4.8,
     reviewCount: 108,
@@ -302,9 +302,6 @@ const loadMore = () => {
 
   // 模擬 API 請求
   setTimeout(() => {
-    // 可以添加更多商品到 products 陣列
-    // products.value.push(...newProducts)
-
     loading.value = false;
     hasMore.value = false; // 沒有更多商品了
   }, 1000);
