@@ -88,7 +88,7 @@
       </div>
 
       <!-- 商品列表 -->
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
         <div
           v-for="product in filteredProducts"
           :key="product.id"
@@ -343,20 +343,6 @@ const products = ref([
     image: "/images/leather-shoe-9.jpg",
     isNew: true,
     discount: 0,
-  },
-  {
-    id: 10,
-    name: "經典流蘇樂福鞋",
-    price: 6280,
-    originalPrice: 6980,
-    style: "loafer",
-    color: "tan",
-    material: "磨砂皮",
-    rating: 5,
-    reviews: 93,
-    image: "/images/leather-shoe-10.jpg",
-    isNew: false,
-    discount: 10,
   },
 ]);
 

@@ -64,7 +64,7 @@
       </div>
 
       <!-- 商品列表 -->
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
         <div
           v-for="product in filteredProducts"
           :key="product.id"
