@@ -123,6 +123,23 @@ const routes = [
     ],
   },
   {
+    path: "/accessories",
+    children: [
+      {
+        path: "socks",
+        component: () => import("@/views/Accessories/Socks.vue"),
+      },
+      {
+        path: "belts",
+        component: () => import("@/views/Accessories/Belts.vue"),
+      },
+      {
+        path: "bags",
+        component: () => import("@/views/Accessories/Bags.vue"),
+      },
+    ],
+  },
+  {
     path: "/user",
     children: [
       {
