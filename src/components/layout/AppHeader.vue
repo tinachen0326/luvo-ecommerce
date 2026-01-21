@@ -243,7 +243,7 @@
               </li>
             </ul>
           </li>
-          
+
           <li>
             <router-link
               to="/stores"
@@ -253,14 +253,14 @@
             </router-link>
           </li>
 
-          <li>
+          <!-- <li>
             <router-link
               to="/admin/dashboard"
               class="text-white hover:text-gray-200 transition-colors font-medium"
             >
               管理後台
             </router-link>
-          </li>
+          </li> -->
         </ul>
 
         <!-- 手機版漢堡選單按鈕 -->
