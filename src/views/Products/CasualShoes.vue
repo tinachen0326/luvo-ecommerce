@@ -247,7 +247,7 @@ const products = ref([
     features: ["透氣", "輕量", "氣墊"],
     rating: 5,
     reviews: 312,
-    image: "/images/product-6.jpg",
+    image: "/images/casual-1.jpg",
     isNew: true,
     isHot: true,
     discount: 20,
