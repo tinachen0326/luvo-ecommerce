@@ -8,12 +8,12 @@ const routes = [
     component: Home,
     meta: { title: "Luvo 履藝 | 首頁" },
   },
-  {
-    path: "/products/:category",
-    name: "Products",
-    component: () => import("../views/Products/ProductList.vue"),
-    meta: { title: "商品列表 | Luvo 履藝" },
-  },
+  // {
+  //   path: "/products/:category",
+  //   name: "Products",
+  //   component: () => import("../views/Products/ProductList.vue"),
+  //   meta: { title: "商品列表 | Luvo 履藝" },
+  // },
   {
     path: "/discount",
     name: "Discount",
