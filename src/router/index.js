@@ -45,6 +45,23 @@ const routes = [
   //   meta: { title: "生活配件 | Luvo 履藝" },
   // },
   {
+    path: "/products",
+    children: [
+      {
+        path: "leather-shoes",
+        component: () => import("@/views/Products/LeatherShoes.vue"),
+      },
+      {
+        path: "boots",
+        component: () => import("@/views/Products/Boots.vue"),
+      },
+      {
+        path: "casual-shoes",
+        component: () => import("@/views/Products/CasualShoes.vue"),
+      },
+    ],
+  },
+  {
     path: "/cart",
     name: "Cart",
     component: () => import("../views/Cart.vue"),
