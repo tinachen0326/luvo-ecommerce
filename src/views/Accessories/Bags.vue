@@ -1,13 +1,18 @@
 <template>
   <div class="min-h-screen bg-gray-50">
     <!-- 頁面橫幅 -->
-    <div
-      class="relative h-80 overflow-hidden bg-gradient-to-r from-amber-900 to-amber-700"
-    >
-      <div class="absolute inset-0 flex items-center justify-center">
+    <div class="relative h-96 overflow-hidden">
+      <img
+        src="/images/bag-1.jpg"
+        alt="托特包系列"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0 bg-black/50 flex items-center justify-center"
+      >
         <div class="text-center text-white">
-          <h1 class="text-5xl font-bold mb-4">托特包系列</h1>
-          <p class="text-xl">簡約時尚，商務休閒兩相宜</p>
+          <h1 class="text-6xl font-bold mb-4">托特包系列</h1>
+          <p class="text-2xl">工藝與品味的極致展現，每一步都是自信</p>
         </div>
       </div>
     </div>
